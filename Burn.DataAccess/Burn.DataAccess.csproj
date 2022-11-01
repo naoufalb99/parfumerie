@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Npgsql" />
+    <None Remove="Dapper" />
+    <None Remove="Database\" />
+    <None Remove="Repositories\" />
+    <None Remove="Microsoft.Extensions.Configuration.Abstractions" />
+    <None Remove="Interfaces\" />
+    <None Remove="Microsoft.Extensions.Options.ConfigurationExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="6.0.7" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Burn.Core\Burn.Core.csproj" />
+  </ItemGroup>
+</Project>
